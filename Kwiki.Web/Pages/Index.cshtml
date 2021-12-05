@@ -1,0 +1,40 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div id="editor">
+<p>This is some sample content.</p>
+</div>
+
+<div>
+<button>Save</button>
+<button>Cancel</button>
+</div>
+
+<!-- 
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div> 
+-->
+
+<!-- <div id="editor">
+  <p>Hello World!</p>
+  <p>Some initial <strong>bold</strong> text</p>
+  <p><br></p>
+</div> -->
+    
+@section Scripts {
+<script>
+// var quill = new Quill('#editor', {
+//   theme: 'snow'
+// });
+ClassicEditor
+.create( document.querySelector( '#editor' ) )
+.catch( error => {
+    console.error( error );
+});
+</script>
+}
